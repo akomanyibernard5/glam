@@ -1207,8 +1207,8 @@ const defaultOrders: Order[] = [
     status: "Shipped",
     total: 167.98,
     items: [
-      { name: "Wrap Midi Dress", qty: 1, price: 69, image: "https:
-      { name: "Strappy Heels", qty: 1, price: 59, image: "https:
+      { name: "Wrap Midi Dress", qty: 1, price: 69, image: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" },
+      { name: "Strappy Heels", qty: 1, price: 59, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop" },
     ],
   },
   {
@@ -1217,7 +1217,7 @@ const defaultOrders: Order[] = [
     status: "Delivered",
     total: 44,
     items: [
-      { name: "Mini Crossbody Bag", qty: 1, price: 44, image: "https:
+      { name: "Mini Crossbody Bag", qty: 1, price: 44, image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop" },
     ],
   },
 ];

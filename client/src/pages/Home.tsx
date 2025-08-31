@@ -18,40 +18,40 @@ import { useNavigate } from 'react-router-dom';
 
 const allProducts: (Product & { category: string })[] = [
   
-  { id: "d1", name: "Midi Dress", price: 79, image: "https:
-  { id: "d2", name: "Maxi Dress", price: 89, image: "https:
-  { id: "d3", name: "Bodycon Dress", price: 59, image: "https:
-  { id: "d4", name: "Wrap Dress", price: 75, image: "https:
+  { id: "d1", name: "Midi Dress", price: 79, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "d2", name: "Maxi Dress", price: 89, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "d3", name: "Bodycon Dress", price: 59, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "d4", name: "Wrap Dress", price: 75, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
   
   
-  { id: "t1", name: "Silk Blouse", price: 65, image: "https:
-  { id: "t2", name: "Crop Top", price: 35, image: "https:
-  { id: "t3", name: "Cardigan", price: 75, image: "https:
+  { id: "t1", name: "Silk Blouse", price: 65, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "t2", name: "Crop Top", price: 35, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "t3", name: "Cardigan", price: 75, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
   
   
-  { id: "bt1", name: "High-Waist Jeans", price: 69, image: "https:
-  { id: "bt2", name: "Midi Skirt", price: 54, image: "https:
+  { id: "bt1", name: "High-Waist Jeans", price: 69, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "bt2", name: "Midi Skirt", price: 54, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
   
   
-  { id: "b1", name: "Ladies Dressing Bag", price: 110, image: "https:
-  { id: "b2", name: "Ladies Chain Handbag", price: 44, image: "https:
-  { id: "b3", name: "Ladies Designer Tote", price: 89, image: "https:
-  { id: "b4", name: "Ladies Evening Clutch", price: 65, image: "https:
-  { id: "b5", name: "Ladies Shoulder Purse", price: 95, image: "https:
+  { id: "b1", name: "Ladies Dressing Bag", price: 110, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "b2", name: "Ladies Chain Handbag", price: 44, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "b3", name: "Ladies Designer Tote", price: 89, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "b4", name: "Ladies Evening Clutch", price: 65, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "b5", name: "Ladies Shoulder Purse", price: 95, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
   
   
-  { id: "j1", name: "Gold Necklace", price: 35, image: "https:
-  { id: "j2", name: "Pearl Earrings", price: 25, image: "https:
-  { id: "j3", name: "Silver Bracelet", price: 40, image: "https:
-  { id: "j4", name: "Ring Set", price: 30, image: "https:
-  { id: "j5", name: "Diamond Earrings", price: 120, image: "https:
+  { id: "j1", name: "Gold Necklace", price: 35, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "j2", name: "Pearl Earrings", price: 25, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "j3", name: "Silver Bracelet", price: 40, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "j4", name: "Ring Set", price: 30, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "j5", name: "Diamond Earrings", price: 120, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
   
   
-  { id: "w1", name: "Ladies Curly Lace Front Wig", price: 150, image: "https:
-  { id: "w2", name: "Ladies Sleek Bob Wig", price: 120, image: "https:
-  { id: "w3", name: "Ladies Long Wavy Wig", price: 180, image: "https:
-  { id: "w4", name: "Ladies Pixie Cut Wig", price: 95, image: "https:
-  { id: "w5", name: "Ladies Braided Wig", price: 200, image: "https:
+  { id: "w1", name: "Ladies Curly Lace Front Wig", price: 150, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "w2", name: "Ladies Sleek Bob Wig", price: 120, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "w3", name: "Ladies Long Wavy Wig", price: 180, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "w4", name: "Ladies Pixie Cut Wig", price: 95, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
+  { id: "w5", name: "Ladies Braided Wig", price: 200, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
 ];
 
 interface HomePageProps {
@@ -145,7 +145,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
 
           <div className="relative">
             <LazyImage
-              src="https:
+              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
               alt="Elegant woman in fashion"
               className="h-full w-full rounded-2xl object-cover"
             />
@@ -168,22 +168,22 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
             {
               key: "clothing",
               title: "Clothes",
-              img: "https:
+              img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
             },
             {
               key: "bags",
               title: "Bags",
-              img: "https:
+              img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
             },
             {
               key: "jewelry",
               title: "Jewelry",
-              img: "https:
+              img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
             },
             {
               key: "wigs",
               title: "Ladies Wigs",
-              img: "https:
+              img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
             },
           ].map((c) => (
             <button key={c.key} onClick={() => handleCategoryChange(c.key)} className="group overflow-hidden rounded-2xl border bg-white text-left">
@@ -305,7 +305,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         <button onClick={() => handleCategoryChange('lookbook')} className="group overflow-hidden rounded-2xl border bg-white text-left">
           <div className="aspect-[16/10] overflow-hidden">
             <LazyImage
-              src="https:
+              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
               alt="Women's fashion lookbook"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -322,7 +322,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         <button onClick={() => handleCategoryChange('editorial')} className="group overflow-hidden rounded-2xl border bg-white text-left">
           <div className="aspect-[16/10] overflow-hidden">
             <LazyImage
-              src="https:
+              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80"https:w=1200"https:auto=format"https:fit=crop"
               alt="Women's style guide"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
