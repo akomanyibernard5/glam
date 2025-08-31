@@ -23,7 +23,7 @@ admin.initializeApp({
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://glam-client.onrender.com'],
   credentials: true
 }));
 app.use(express.json());
