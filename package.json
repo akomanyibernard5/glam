@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "cd server && npm start",
-    "build": "cd client && npm run build",
+    "build": "cd admin && npm run build",
     "install-server": "cd server && npm install",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-server && npm run install-client && npm run build"
+    "install-admin": "cd admin && npm install",
+    "heroku-postbuild": "npm run install-server && npm run install-admin && npm run build"
   },
   "engines": {
     "node": ">=14.0.0"
