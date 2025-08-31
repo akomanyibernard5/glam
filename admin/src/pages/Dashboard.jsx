@@ -25,10 +25,10 @@ const recentOrders = [
 ];
 
 const products = [
-  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, img: "https:
-  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, img: "https:
-  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, img: "https:
-  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, img: "https:
+  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" },
+  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop" },
+  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" },
+  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, img: "https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=1200&auto=format&fit=crop" },
 ];
 
 export default function Dashboard() {
