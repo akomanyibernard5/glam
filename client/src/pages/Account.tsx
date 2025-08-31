@@ -8,7 +8,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { updatePassword, reauthenticateWithCredential, EmailAuthProvider } from 'firebase/auth';
 import { auth } from '../config/firebase';
-import { userAPI, addressAPI, paymentAPI, notificationAPI, orderAPI } from '../services/api';
+import { userAPI, addressAPI, paymentAPI, notificationAPI } from '../services/api';
 
 interface Address {
   id: string;
@@ -89,27 +89,13 @@ export default function Account() {
     type: 'Shipping'
   });
 
-  React.useEffect(() => {
-    if (!loading && !isAuthenticated) {
-      navigate('/auth');
-    }
-  }, [loading, isAuthenticated, navigate]);
-
-  
-  React.useEffect(() => {
-    if (isAuthenticated && !loading) {
-      loadUserData();
-    }
-  }, [isAuthenticated, loading]);
-
-  const loadUserData = async () => {
+  const loadUserData = React.useCallback(async () => {
     try {
-      const [userRes, addressRes, paymentRes, notificationRes, orderRes] = await Promise.all([
+      const [userRes, addressRes, paymentRes, notificationRes] = await Promise.all([
         userAPI.getProfile(),
         addressAPI.getAddresses(),
         paymentAPI.getPaymentMethods(),
-        notificationAPI.getSettings(),
-        orderAPI.getOrders()
+        notificationAPI.getSettings()
       ]);
       
       if (userRes.user) {
@@ -131,7 +117,19 @@ export default function Account() {
     } catch (error) {
       console.error('Error loading user data:', error);
     }
-  };
+  }, [user?.displayName, user?.email]);
+
+  React.useEffect(() => {
+    if (!loading && !isAuthenticated) {
+      navigate('/auth');
+    }
+  }, [loading, isAuthenticated, navigate]);
+
+  React.useEffect(() => {
+    if (isAuthenticated && !loading) {
+      loadUserData();
+    }
+  }, [isAuthenticated, loading, loadUserData]);
 
   const handleSignOut = async () => {
     try {

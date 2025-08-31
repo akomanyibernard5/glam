@@ -1,4 +1,4 @@
-const API_BASE = 'http:
+const API_BASE = 'http://localhost:5000';
 
 interface AuthResponse {
   token: string;
