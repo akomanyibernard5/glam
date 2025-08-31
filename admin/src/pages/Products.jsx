@@ -7,12 +7,12 @@ import { useToast } from "../components/Toast";
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const initialProducts = [
-  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, category: "Dresses", img: "https:
-  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, category: "Bags", img: "https:
-  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, category: "Jewelry", img: "https:
-  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, category: "Clothing", img: "https:
-  { id: 5, name: "Silk Scarf", price: 35.00, stock: 25, category: "Accessories", img: "https:
-  { id: 6, name: "High Heel Pumps", price: 120.00, stock: 15, category: "Shoes", img: "https:
+  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, category: "Dresses", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" },
+  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, category: "Bags", img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop" },
+  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, category: "Jewelry", img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" },
+  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, category: "Clothing", img: "https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=1200&auto=format&fit=crop" },
+  { id: 5, name: "Silk Scarf", price: 35.00, stock: 25, category: "Accessories", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop" },
+  { id: 6, name: "High Heel Pumps", price: 120.00, stock: 15, category: "Shoes", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop" },
 ];
 
 export default function Products() {

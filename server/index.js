@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb:
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ladies-glam')
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
@@ -23,7 +23,7 @@ admin.initializeApp({
 });
 
 app.use(cors({
-  origin: ['http:
+  origin: ['http://localhost:3000', 'https://glam-client.onrender.com'],
   credentials: true
 }));
 app.use(express.json());
