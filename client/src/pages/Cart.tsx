@@ -34,7 +34,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         size: "M",
         price: 69,
         qty: 1,
-        image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
+        image: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop",
         inStock: true,
       },
       {
@@ -45,7 +45,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         size: "38",
         price: 59,
         qty: 2,
-        image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
+        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop",
         inStock: true,
       },
       {
@@ -55,7 +55,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         color: "Black",
         price: 44,
         qty: 1,
-        image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
+        image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop",
         inStock: false,
       },
     ]
@@ -249,10 +249,10 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         <h3 className="text-lg font-semibold">You may also like</h3>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {[
-            { id: 1, name: "Midi Skirt", price: 54, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
-            { id: 2, name: "Pearl Earrings", price: 25, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
-            { id: 3, name: "Sneakers", price: 75, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
-            { id: 4, name: "Cardigan", price: 75, image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"fit=crop",
+            { id: 1, name: "Midi Skirt", price: 54, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop" },
+            { id: 2, name: "Pearl Earrings", price: 25, image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" },
+            { id: 3, name: "Sneakers", price: 75, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop" },
+            { id: 4, name: "Cardigan", price: 75, image: "https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=1200&auto=format&fit=crop" },
           ].map((item) => (
             <button key={item.id} onClick={() => onNavigate?.('home')} className="group overflow-hidden rounded-2xl border bg-white text-left">
               <div className="aspect-[4/5] overflow-hidden">

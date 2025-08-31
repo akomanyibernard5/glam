@@ -10,37 +10,37 @@ import { useToast } from '../components/Toast';
 const carouselImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Elegant Dresses",
     category: "Fashion"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Designer Handbags",
     category: "Accessories"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Hair Styling",
     category: "Beauty"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Chic Outerwear",
     category: "Fashion"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Luxury Bags",
     category: "Accessories"
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop",
+    url: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop",fit=crop", category: "clothing" },
     title: "Hair Care",
     category: "Beauty"
   }
