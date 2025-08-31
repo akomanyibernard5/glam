@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://backend-glam.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https:
 
 const getAuthToken = () => localStorage.getItem('adminAuth');
 
@@ -23,12 +23,12 @@ const apiRequest = async (endpoint, options = {}) => {
   return response.json();
 };
 
-// Admin API endpoints
+
 export const adminAPI = {
-  // Dashboard stats
+  
   getStats: () => apiRequest('/admin/stats'),
   
-  // Products management
+  
   getProducts: () => apiRequest('/admin/products'),
   createProduct: (productData) =>
     apiRequest('/admin/products', {
@@ -45,7 +45,7 @@ export const adminAPI = {
       method: 'DELETE',
     }),
   
-  // Orders management
+  
   getOrders: () => apiRequest('/admin/orders'),
   updateOrderStatus: (orderId, status) =>
     apiRequest(`/admin/orders/${orderId}/status`, {
@@ -53,10 +53,10 @@ export const adminAPI = {
       body: JSON.stringify({ status }),
     }),
   
-  // Customers management
+  
   getCustomers: () => apiRequest('/admin/customers'),
   
-  // Analytics
+  
   getAnalytics: (period = '30d') => apiRequest(`/admin/analytics?period=${period}`),
 };
 

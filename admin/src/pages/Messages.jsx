@@ -67,7 +67,7 @@ export default function Messages() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Message List */}
+        {}
         <div className="lg:col-span-1">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-4">
             <div className="mb-4">
@@ -110,7 +110,7 @@ export default function Messages() {
           </div>
         </div>
 
-        {/* Message Detail */}
+        {}
         <div className="lg:col-span-2">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-6">
             {selectedMessage ? (

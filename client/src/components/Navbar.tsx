@@ -92,17 +92,17 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
         ].join(" ")}
         aria-label="Primary"
       >
-        {/* Top Row */}
+        {}
         <div className="flex items-center gap-2 px-4 py-2 md:px-6">
 
 
-          {/* Brand */}
+          {}
           <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
             <div className="rounded-full bg-black p-2 text-white"><ShoppingBag className="h-4 w-4"/></div>
             <span className={`font-semibold tracking-tight md:text-lg transition-opacity ${searchOpen ? 'opacity-0 md:opacity-100' : 'opacity-100'}`}>Ladies Glam</span>
           </button>
 
-          {/* Desktop: nav links */}
+          {}
           <div className="ml-2 hidden items-center md:flex">
             <ul className="flex items-center gap-1">
               {NAV_LINKS.map((link) => (
@@ -134,7 +134,7 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
                     {link.mega && <ChevronDown className="h-4 w-4" />}
                   </button>
 
-                  {/* Mega menu */}
+                  {}
                   {link.mega && (
                     <AnimatePresence>
                       {activeMega === link.label && (
@@ -174,7 +174,7 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
                                 </ul>
                               </div>
                             ))}
-                            {/* Banner */}
+                            {}
                             <div className="col-span-4 mt-2 rounded-xl bg-rose-50/70 p-4">
                               <div className="flex flex-wrap items-center justify-between gap-4">
                                 <div>
@@ -203,12 +203,12 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
             </ul>
           </div>
 
-          {/* Spacer */}
+          {}
           <div className="flex-1" />
 
-          {/* Actions */}
+          {}
           <div className="flex items-center gap-1">
-            {/* Search */}
+            {}
             <div className="relative flex items-center">
               <motion.input
                 initial={{ width: 40 }}
@@ -236,7 +236,7 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
               <Search className="pointer-events-none absolute left-2 h-5 w-5 text-gray-500" />
             </div>
 
-            {/* Desktop Icons */}
+            {}
             <button
               onClick={() => onNavigate('wishlist')}
               className="relative hidden md:inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
@@ -272,7 +272,7 @@ export default function Navbar({ onNavigate, currentPage, cartCount = 0, wishlis
         </div>
       </motion.nav>
 
-      {/* Mobile Bottom Navigation */}
+      {}
       <motion.nav
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

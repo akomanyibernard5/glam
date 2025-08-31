@@ -41,7 +41,7 @@ function AppContent() {
   const currentPage = (location.pathname === '/' ? 'home' : location.pathname.slice(1)) as 'home' | 'cart' | 'account' | 'wishlist' | 'auth' | 'login';
   const isAuthPage = location.pathname === '/auth' || location.pathname === '/login';
 
-  // Redirect to home if already authenticated and on auth page
+  
   React.useEffect(() => {
     const token = localStorage.getItem('authToken');
     if (token && isAuthPage && location.pathname !== '/') {

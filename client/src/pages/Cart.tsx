@@ -34,7 +34,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         size: "M",
         price: 69,
         qty: 1,
-        image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=800&auto=format&fit=crop",
+        image: "https:
         inStock: true,
       },
       {
@@ -45,7 +45,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         size: "38",
         price: 59,
         qty: 2,
-        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=800&auto=format&fit=crop",
+        image: "https:
         inStock: true,
       },
       {
@@ -55,7 +55,7 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         color: "Black",
         price: 44,
         qty: 1,
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop",
+        image: "https:
         inStock: false,
       },
     ]
@@ -249,10 +249,10 @@ export default function CartPage({ initialItems, onNavigate }: CartPageProps) {
         <h3 className="text-lg font-semibold">You may also like</h3>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {[
-            { id: 1, name: "Midi Skirt", price: 54, image: "https://images.unsplash.com/photo-1583496661160-fb5886a13d27?q=80&w=1200&auto=format&fit=crop" },
-            { id: 2, name: "Pearl Earrings", price: 25, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop" },
-            { id: 3, name: "Sneakers", price: 75, image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1200&auto=format&fit=crop" },
-            { id: 4, name: "Cardigan", price: 75, image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop" }
+            { id: 1, name: "Midi Skirt", price: 54, image: "https:
+            { id: 2, name: "Pearl Earrings", price: 25, image: "https:
+            { id: 3, name: "Sneakers", price: 75, image: "https:
+            { id: 4, name: "Cardigan", price: 75, image: "https:
           ].map((item) => (
             <button key={item.id} onClick={() => onNavigate?.('home')} className="group overflow-hidden rounded-2xl border bg-white text-left">
               <div className="aspect-[4/5] overflow-hidden">

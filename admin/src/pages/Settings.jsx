@@ -24,7 +24,7 @@ export default function Settings() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        {/* Sidebar */}
+        {}
         <div className="lg:col-span-1">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-4">
             <nav className="space-y-1">
@@ -49,7 +49,7 @@ export default function Settings() {
           </div>
         </div>
 
-        {/* Content */}
+        {}
         <div className="lg:col-span-3">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-6">
             {activeTab === "profile" && (

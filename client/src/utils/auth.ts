@@ -8,17 +8,17 @@ interface AuthUser {
   token: string;
 }
 
-// Generate JWT-like token (for demo - in production use proper JWT library)
+
 const generateToken = (user: User): string => {
   const payload = {
     uid: user.uid,
     email: user.email,
-    exp: Date.now() + (24 * 60 * 60 * 1000) // 24 hours
+    exp: Date.now() + (24 * 60 * 60 * 1000) 
   };
   return btoa(JSON.stringify(payload));
 };
 
-// Validate token
+
 export const isTokenValid = (token: string): boolean => {
   try {
     const payload = JSON.parse(atob(token));
@@ -28,7 +28,7 @@ export const isTokenValid = (token: string): boolean => {
   }
 };
 
-// Store user with token
+
 export const storeUser = (user: User) => {
   const token = generateToken(user);
   const authUser: AuthUser = {
@@ -42,7 +42,7 @@ export const storeUser = (user: User) => {
   return authUser;
 };
 
-// Get stored user
+
 export const getStoredUser = (): AuthUser | null => {
   const stored = localStorage.getItem('authUser');
   if (!stored) return null;
@@ -55,12 +55,12 @@ export const getStoredUser = (): AuthUser | null => {
   return user;
 };
 
-// Clear stored user
+
 export const clearStoredUser = () => {
   localStorage.removeItem('authUser');
 };
 
-// Check if user is authenticated
+
 export const isAuthenticated = (): boolean => {
   const user = getStoredUser();
   return !!user && isTokenValid(user.token);

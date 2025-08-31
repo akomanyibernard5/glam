@@ -5,30 +5,30 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const admin = require('firebase-admin');
 
-// Models
+
 const User = require('./models/User');
 const Order = require('./models/Order');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ladies-glam')
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb:
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Initialize Firebase Admin
+
 admin.initializeApp({
   projectId: process.env.FIREBASE_PROJECT_ID
 });
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://glam-client.onrender.com'],
+  origin: ['http:
   credentials: true
 }));
 app.use(express.json());
 
-// Auth middleware
+
 const authenticateToken = async (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -46,14 +46,14 @@ const authenticateToken = async (req, res, next) => {
   }
 };
 
-// Auth Routes
+
 app.post('/auth/google', async (req, res) => {
   try {
     const { idToken } = req.body;
     
     const decodedToken = await admin.auth().verifyIdToken(idToken);
     
-    // Create or update user in MongoDB
+    
     let user = await User.findOne({ uid: decodedToken.uid });
     if (!user) {
       user = new User({
@@ -90,7 +90,7 @@ app.post('/auth/google', async (req, res) => {
   }
 });
 
-// User Profile Routes
+
 app.get('/user/profile', authenticateToken, async (req, res) => {
   try {
     const user = await User.findOne({ uid: req.user.uid });
@@ -117,7 +117,7 @@ app.put('/user/profile', authenticateToken, async (req, res) => {
   }
 });
 
-// Address Routes
+
 app.get('/user/addresses', authenticateToken, async (req, res) => {
   try {
     const user = await User.findOne({ uid: req.user.uid });
@@ -185,7 +185,7 @@ app.delete('/user/addresses/:addressId', authenticateToken, async (req, res) => 
   }
 });
 
-// Payment Methods Routes
+
 app.get('/user/payment-methods', authenticateToken, async (req, res) => {
   try {
     const user = await User.findOne({ uid: req.user.uid });
@@ -227,7 +227,7 @@ app.delete('/user/payment-methods/:paymentId', authenticateToken, async (req, re
   }
 });
 
-// Notification Settings Routes
+
 app.get('/user/notifications', authenticateToken, async (req, res) => {
   try {
     const user = await User.findOne({ uid: req.user.uid });
@@ -250,7 +250,7 @@ app.put('/user/notifications', authenticateToken, async (req, res) => {
   }
 });
 
-// Orders Routes
+
 app.get('/user/orders', authenticateToken, async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.user.uid }).sort({ createdAt: -1 });

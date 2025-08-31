@@ -6,47 +6,47 @@ import { signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPass
 import { auth, googleProvider } from "../config/firebase";
 import { useToast } from '../components/Toast';
 
-// Carousel images for female clothing, bags, and hair
+
 const carouselImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Elegant Dresses",
     category: "Fashion"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Designer Handbags",
     category: "Accessories"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Hair Styling",
     category: "Beauty"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Chic Outerwear",
     category: "Fashion"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Luxury Bags",
     category: "Accessories"
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop",
+    url: "https:
     title: "Hair Care",
     category: "Beauty"
   }
 ];
 
-// Carousel Component
+
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -158,18 +158,18 @@ function Auth() {
         photoURL: user.photoURL
       }));
       
-      // Ensure minimum 2 second loading time
+      
       const elapsed = Date.now() - startTime;
       const remainingTime = Math.max(0, 2000 - elapsed);
       
       await new Promise(resolve => setTimeout(resolve, remainingTime));
       
       showToast('Signed in with Google successfully!', 'success');
-      navigate('/');
+      setTimeout(() => navigate('/'), 0);
     } catch (error) {
       console.error('Authentication error:', error);
       
-      // Ensure minimum 2 second loading time even for errors
+      
       const elapsed = Date.now() - startTime;
       const remainingTime = Math.max(0, 2000 - elapsed);
       
@@ -182,7 +182,7 @@ function Auth() {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
+    
     if (!formData.email || !formData.password) {
       showToast('Please fill in all required fields', 'error');
       return;
@@ -205,12 +205,12 @@ function Auth() {
       let userCredential;
       
       if (isLogin) {
-        // Sign in existing user
+        
         userCredential = await signInWithEmailAndPassword(auth, formData.email.trim(), formData.password);
       } else {
-        // Create new user
+        
         userCredential = await createUserWithEmailAndPassword(auth, formData.email.trim(), formData.password);
-        // Update display name for new users
+        
         if (formData.name.trim()) {
           await updateProfile(userCredential.user, {
             displayName: formData.name.trim()
@@ -228,14 +228,14 @@ function Auth() {
         photoURL: user.photoURL
       }));
       
-      // Ensure minimum 2 second loading time
+      
       const elapsed = Date.now() - startTime;
       const remainingTime = Math.max(0, 2000 - elapsed);
       
       await new Promise(resolve => setTimeout(resolve, remainingTime));
       
       showToast(isLogin ? 'Signed in successfully!' : 'Account created successfully!', 'success');
-      navigate('/');
+      setTimeout(() => navigate('/'), 0);
     } catch (error: any) {
       console.error('Authentication error:', error);
       let errorMessage = 'Authentication failed';
@@ -267,7 +267,7 @@ function Auth() {
           errorMessage = `Authentication failed: ${error.message}`;
       }
       
-      // Ensure minimum 2 second loading time even for errors
+      
       const elapsed = Date.now() - startTime;
       const remainingTime = Math.max(0, 2000 - elapsed);
       

@@ -1,4 +1,4 @@
-// Google OAuth Configuration
+
 export const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID || 'your-google-client-id-here';
 
 export const googleAuthConfig = {
@@ -8,13 +8,13 @@ export const googleAuthConfig = {
   cancel_on_tap_outside: true,
 };
 
-// Handle Google OAuth callback
+
 export function handleGoogleCallback(response: any) {
   try {
-    // Decode the JWT token to get user info
+    
     const userInfo = parseJwt(response.credential);
     
-    // Store user info in localStorage (you might want to use a more secure method)
+    
     localStorage.setItem('user', JSON.stringify({
       id: userInfo.sub,
       email: userInfo.email,
@@ -23,7 +23,7 @@ export function handleGoogleCallback(response: any) {
       isAuthenticated: true
     }));
     
-    // Redirect to home page
+    
     window.location.href = '/';
     
   } catch (error) {
@@ -31,7 +31,7 @@ export function handleGoogleCallback(response: any) {
   }
 }
 
-// Parse JWT token
+
 function parseJwt(token: string) {
   try {
     const base64Url = token.split('.')[1];
@@ -49,14 +49,14 @@ function parseJwt(token: string) {
   }
 }
 
-// Initialize Google OAuth
+
 export function initializeGoogleAuth() {
   if (typeof window !== 'undefined' && window.google) {
     window.google.accounts.id.initialize(googleAuthConfig);
   }
 }
 
-// Sign out function
+
 export function signOut() {
   localStorage.removeItem('user');
   if (typeof window !== 'undefined' && window.google) {
@@ -64,13 +64,13 @@ export function signOut() {
   }
 }
 
-// Check if user is authenticated
+
 export function isAuthenticated() {
   const user = localStorage.getItem('user');
   return user ? JSON.parse(user).isAuthenticated : false;
 }
 
-// Get current user
+
 export function getCurrentUser() {
   const user = localStorage.getItem('user');
   return user ? JSON.parse(user) : null;

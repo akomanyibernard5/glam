@@ -35,7 +35,7 @@ export default function Analytics() {
       </div>
 
       <div className="grid gap-6">
-        {/* Key Metrics */}
+        {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-4">
             <div className="flex items-center justify-between mb-2">
@@ -74,7 +74,7 @@ export default function Analytics() {
           </div>
         </div>
 
-        {/* Charts */}
+        {}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-6">
             <h3 className="font-semibold mb-4">Revenue Trend</h3>
@@ -121,7 +121,7 @@ export default function Analytics() {
           </div>
         </div>
 
-        {/* Top Products */}
+        {}
         <div className="rounded-2xl border border-zinc-700 bg-zinc-800 p-6">
           <h3 className="font-semibold mb-4">Top Performing Products</h3>
           <div className="overflow-auto">

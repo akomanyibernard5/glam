@@ -29,7 +29,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated background elements */}
+      {}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
@@ -43,7 +43,7 @@ function Login() {
         className="w-full max-w-md relative z-10"
       >
         <div className="bg-white/5 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 border border-white/10 relative overflow-hidden">
-          {/* Gradient overlay */}
+          {}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl" />
           
           <div className="relative z-10">

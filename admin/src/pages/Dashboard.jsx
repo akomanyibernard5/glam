@@ -25,10 +25,10 @@ const recentOrders = [
 ];
 
 const products = [
-  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" },
-  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop" },
-  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" },
-  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, img: "https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=1200&auto=format&fit=crop" },
+  { id: 1, name: "Floral Summer Dress", price: 49.99, stock: 34, img: "https:
+  { id: 2, name: "Leather Tote Bag", price: 89.0, stock: 12, img: "https:
+  { id: 3, name: "Gold Hoop Earrings", price: 24.5, stock: 77, img: "https:
+  { id: 4, name: "Knit Cardigan", price: 64.99, stock: 8, img: "https:
 ];
 
 export default function Dashboard() {
@@ -48,7 +48,7 @@ export default function Dashboard() {
 
   return (
     <main className="p-6 grid gap-6">
-      {/* KPI cards */}
+      {}
       <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         {kpis.map((k) => (
           <div key={k.title} className="cursor-pointer">
@@ -57,7 +57,7 @@ export default function Dashboard() {
         ))}
       </section>
 
-      {/* Charts + Orders */}
+      {}
       <section className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         <div className="xl:col-span-2 rounded-2xl border border-zinc-700 bg-zinc-800 p-4 cursor-pointer">
           <div className="flex items-center justify-between mb-4">
@@ -111,7 +111,7 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* Products */}
+      {}
       <section className="rounded-2xl border border-zinc-700 bg-zinc-800 p-4">
         <div className="flex flex-col md:flex-row md:items-center gap-3 md:justify-between mb-4">
           <h3 className="font-semibold">Products</h3>
@@ -181,7 +181,7 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* Recent Orders */}
+      {}
       <section className="rounded-2xl border border-zinc-700 bg-zinc-800 p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold">Recent Orders</h3>

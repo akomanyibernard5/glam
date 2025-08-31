@@ -1,4 +1,4 @@
-// Google Identity Services type definitions
+
 declare global {
   interface Window {
     google: {

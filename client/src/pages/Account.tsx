@@ -95,7 +95,7 @@ export default function Account() {
     }
   }, [loading, isAuthenticated, navigate]);
 
-  // Load user data from backend
+  
   React.useEffect(() => {
     if (isAuthenticated && !loading) {
       loadUserData();
@@ -127,7 +127,7 @@ export default function Account() {
         newArrivals: true,
         salesPromos: false
       });
-      // Note: orders state is read-only in current implementation
+      
     } catch (error) {
       console.error('Error loading user data:', error);
     }
@@ -347,11 +347,11 @@ export default function Account() {
         return;
       }
       
-      // Re-authenticate user with current password
+      
       const credential = EmailAuthProvider.credential(currentUser.email, passwordForm.current);
       await reauthenticateWithCredential(currentUser, credential);
       
-      // Update password
+      
       await updatePassword(currentUser, passwordForm.new);
       
       showToast('Password updated successfully!', 'success');
@@ -383,7 +383,7 @@ export default function Account() {
   return (
     <main className="min-h-screen bg-gray-50 pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {}
         <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">My Account</h1>
@@ -398,11 +398,11 @@ export default function Account() {
           </button>
         </div>
 
-        {/* Main content */}
+        {}
         <div className="grid gap-6 lg:gap-8 lg:grid-cols-3">
-          {/* Profile section */}
+          {}
           <div className="lg:col-span-2 space-y-6">
-            {/* Profile info */}
+            {}
             <div className="rounded-2xl border bg-white p-6 sm:p-8">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
                 {user?.photoURL ? (
@@ -500,7 +500,7 @@ export default function Account() {
               </div>
             </div>
 
-            {/* Recent orders */}
+            {}
             <div className="rounded-2xl border bg-white p-4 sm:p-6">
               <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <h3 className="text-lg font-semibold">Recent Orders</h3>
@@ -519,9 +519,9 @@ export default function Account() {
             </div>
           </div>
 
-          {/* Sidebar */}
+          {}
           <aside className="space-y-4 lg:space-y-6">
-            {/* Payment methods */}
+            {}
             <div className="rounded-2xl border bg-white p-4 sm:p-5">
               <div className="mb-4 flex items-center justify-between gap-2">
                 <h3 className="text-sm sm:text-lg font-semibold">Payment Methods</h3>
@@ -585,7 +585,7 @@ export default function Account() {
               </div>
             </div>
 
-            {/* Security */}
+            {}
             <div className="rounded-2xl border bg-white p-4 sm:p-5">
               <h3 className="text-sm font-semibold">Security</h3>
               <div className="mt-3 space-y-3 text-sm">
@@ -660,7 +660,7 @@ export default function Account() {
               </div>
             </div>
 
-            {/* Notifications */}
+            {}
             <div className="rounded-2xl border bg-white p-4 sm:p-5">
               <h3 className="text-sm font-semibold mb-4">Notifications</h3>
               <div className="space-y-4">
@@ -740,7 +740,7 @@ export default function Account() {
           </aside>
         </div>
 
-        {/* Promo codes section */}
+        {}
         <section className="mt-8 lg:mt-10">
           <div className="rounded-2xl border bg-white p-4 sm:p-6">
             <h2 className="text-lg font-semibold mb-4">Promo Codes</h2>
@@ -799,7 +799,7 @@ export default function Account() {
           </div>
         </section>
 
-        {/* Addresses management */}
+        {}
         <section className="mt-8 lg:mt-10">
           <div className="mb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <h2 className="text-lg font-semibold">Your Addresses</h2>
@@ -849,7 +849,7 @@ export default function Account() {
           </div>
         </section>
 
-        {/* Danger zone */}
+        {}
         <section className="mt-8 lg:mt-10 rounded-2xl border border-rose-200 bg-rose-50 p-4 sm:p-5">
           <h3 className="text-sm font-semibold text-rose-800">Danger Zone</h3>
           <p className="mt-1 text-sm text-rose-900/80">Delete your account and all associated data. This action cannot be undone.</p>
@@ -865,7 +865,7 @@ export default function Account() {
           </button>
         </section>
 
-        {/* Add Address Modal */}
+        {}
         {showAddressModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
             <div className="w-full max-w-md rounded-2xl bg-white p-4 sm:p-6 max-h-[90vh] overflow-y-auto">
@@ -984,7 +984,7 @@ export default function Account() {
           </div>
         )}
 
-        {/* Order Details Modal */}
+        {}
         {showOrderDetails && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
             <div className="w-full max-w-2xl rounded-2xl bg-white p-4 sm:p-6 max-h-[90vh] overflow-y-auto">
@@ -1046,7 +1046,7 @@ export default function Account() {
           </div>
         )}
 
-        {/* Add Payment Modal */}
+        {}
         {showPaymentModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
             <div className="w-full max-w-md rounded-2xl bg-white p-4 sm:p-6">
@@ -1153,7 +1153,7 @@ function OrderCard({ order, setShowOrderDetails }: { order: Order; setShowOrderD
         </div>
       </div>
 
-      {/* Items */}
+      {}
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {order.items.map((it, idx) => (
           <div key={idx} className="flex items-center gap-3 rounded-xl border p-3">
@@ -1179,7 +1179,7 @@ function OrderCard({ order, setShowOrderDetails }: { order: Order; setShowOrderD
   );
 }
 
-// ------- Mock Data (replace with API data) -------
+
 const defaultAddresses: Address[] = [
   {
     id: "addr1",
@@ -1207,8 +1207,8 @@ const defaultOrders: Order[] = [
     status: "Shipped",
     total: 167.98,
     items: [
-      { name: "Wrap Midi Dress", qty: 1, price: 69, image: "https://images.unsplash.com/photo-1544441893-675973e319bd?q=80&w=800&auto=format&fit=crop" },
-      { name: "Strappy Heels", qty: 1, price: 59, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" },
+      { name: "Wrap Midi Dress", qty: 1, price: 69, image: "https:
+      { name: "Strappy Heels", qty: 1, price: 59, image: "https:
     ],
   },
   {
@@ -1217,7 +1217,7 @@ const defaultOrders: Order[] = [
     status: "Delivered",
     total: 44,
     items: [
-      { name: "Mini Crossbody Bag", qty: 1, price: 44, image: "https://images.unsplash.com/photo-1592878904946-b3cd5f57a2b9?q=80&w=800&auto=format&fit=crop" },
+      { name: "Mini Crossbody Bag", qty: 1, price: 44, image: "https:
     ],
   },
 ];

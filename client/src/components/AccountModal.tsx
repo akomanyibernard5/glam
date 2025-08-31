@@ -19,7 +19,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple success message and close modal
+    
     alert(isLogin ? 'Login successful!' : 'Account created successfully!');
     onClose();
   };
@@ -33,7 +33,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
       <div 
         className="relative z-10 w-full max-w-md rounded-2xl bg-white p-6 shadow-xl"
       >
-        {/* Close button */}
+        {}
         <button
           onClick={onClose}
           className="absolute right-3 top-3 rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 cursor-pointer"
@@ -41,7 +41,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
           <X className="h-5 w-5" />
         </button>
 
-        {/* Header */}
+        {}
         <div className="mb-6 text-center">
           <User className="mx-auto h-10 w-10 text-rose-600" />
           <h2 className="mt-3 text-xl font-semibold text-gray-900">
@@ -52,7 +52,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
           </p>
         </div>
 
-        {/* Form */}
+        {}
         <form className="space-y-4" onSubmit={handleSubmit}>
           {!isLogin && (
             <div>
@@ -116,7 +116,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
           </button>
         </form>
 
-        {/* Switcher */}
+        {}
         <p className="mt-6 text-center text-sm text-gray-600">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
@@ -128,7 +128,7 @@ export function AccountModal({ open, onClose }: { open: boolean; onClose: () => 
           </button>
         </p>
 
-        {/* Extra actions */}
+        {}
         <div className="mt-6 flex justify-center gap-4 text-sm">
           <a href="#wishlist" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
             <Heart className="h-4 w-4" /> Wishlist

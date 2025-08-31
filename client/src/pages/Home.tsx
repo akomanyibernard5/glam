@@ -15,43 +15,43 @@ import LazyImage from '../components/LazyImage';
 import { useAuth } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 
-// Women's fashion products matching navbar categories
+
 const allProducts: (Product & { category: string })[] = [
-  // Clothes - Dresses
-  { id: "d1", name: "Midi Dress", price: 79, image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop", rating: 4.7, badge: "New", category: "clothing" },
-  { id: "d2", name: "Maxi Dress", price: 89, image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1200&auto=format&fit=crop", rating: 4.9, category: "clothing" },
-  { id: "d3", name: "Bodycon Dress", price: 59, image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop", rating: 4.4, category: "clothing" },
-  { id: "d4", name: "Wrap Dress", price: 75, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop", rating: 4.6, category: "clothing" },
   
-  // Clothes - Tops
-  { id: "t1", name: "Silk Blouse", price: 65, image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1200&auto=format&fit=crop", rating: 4.5, category: "clothing" },
-  { id: "t2", name: "Crop Top", price: 35, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop", rating: 4.2, category: "clothing" },
-  { id: "t3", name: "Cardigan", price: 75, image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop", rating: 4.6, category: "clothing" },
+  { id: "d1", name: "Midi Dress", price: 79, image: "https:
+  { id: "d2", name: "Maxi Dress", price: 89, image: "https:
+  { id: "d3", name: "Bodycon Dress", price: 59, image: "https:
+  { id: "d4", name: "Wrap Dress", price: 75, image: "https:
   
-  // Clothes - Bottoms
-  { id: "bt1", name: "High-Waist Jeans", price: 69, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop", rating: 4.3, category: "clothing" },
-  { id: "bt2", name: "Midi Skirt", price: 54, image: "https://images.unsplash.com/photo-1583496661160-fb5886a13d27?q=80&w=1200&auto=format&fit=crop", rating: 4.2, category: "clothing" },
   
-  // Bags
-  { id: "b1", name: "Ladies Dressing Bag", price: 110, image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop", rating: 4.8, category: "bags" },
-  { id: "b2", name: "Ladies Chain Handbag", price: 44, image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop", rating: 4.7, category: "bags" },
-  { id: "b3", name: "Ladies Designer Tote", price: 89, image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop", rating: 4.6, category: "bags" },
-  { id: "b4", name: "Ladies Evening Clutch", price: 65, image: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=80&w=1200&auto=format&fit=crop", rating: 4.4, category: "bags" },
-  { id: "b5", name: "Ladies Shoulder Purse", price: 95, image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop", rating: 4.5, category: "bags" },
+  { id: "t1", name: "Silk Blouse", price: 65, image: "https:
+  { id: "t2", name: "Crop Top", price: 35, image: "https:
+  { id: "t3", name: "Cardigan", price: 75, image: "https:
   
-  // Jewelry
-  { id: "j1", name: "Gold Necklace", price: 35, image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop", rating: 4.7, category: "jewelry" },
-  { id: "j2", name: "Pearl Earrings", price: 25, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop", rating: 4.8, category: "jewelry" },
-  { id: "j3", name: "Silver Bracelet", price: 40, image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1200&auto=format&fit=crop", rating: 4.5, category: "jewelry" },
-  { id: "j4", name: "Ring Set", price: 30, image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1200&auto=format&fit=crop", rating: 4.6, category: "jewelry" },
-  { id: "j5", name: "Diamond Earrings", price: 120, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop", rating: 4.9, category: "jewelry" },
   
-  // Wigs for Ladies
-  { id: "w1", name: "Ladies Curly Lace Front Wig", price: 150, image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop", rating: 4.8, badge: "Popular", category: "wigs" },
-  { id: "w2", name: "Ladies Sleek Bob Wig", price: 120, image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop", rating: 4.6, category: "wigs" },
-  { id: "w3", name: "Ladies Long Wavy Wig", price: 180, image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1200&auto=format&fit=crop", rating: 4.7, category: "wigs" },
-  { id: "w4", name: "Ladies Pixie Cut Wig", price: 95, image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200&auto=format&fit=crop", rating: 4.4, category: "wigs" },
-  { id: "w5", name: "Ladies Braided Wig", price: 200, image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1200&auto=format&fit=crop", rating: 4.9, category: "wigs" },
+  { id: "bt1", name: "High-Waist Jeans", price: 69, image: "https:
+  { id: "bt2", name: "Midi Skirt", price: 54, image: "https:
+  
+  
+  { id: "b1", name: "Ladies Dressing Bag", price: 110, image: "https:
+  { id: "b2", name: "Ladies Chain Handbag", price: 44, image: "https:
+  { id: "b3", name: "Ladies Designer Tote", price: 89, image: "https:
+  { id: "b4", name: "Ladies Evening Clutch", price: 65, image: "https:
+  { id: "b5", name: "Ladies Shoulder Purse", price: 95, image: "https:
+  
+  
+  { id: "j1", name: "Gold Necklace", price: 35, image: "https:
+  { id: "j2", name: "Pearl Earrings", price: 25, image: "https:
+  { id: "j3", name: "Silver Bracelet", price: 40, image: "https:
+  { id: "j4", name: "Ring Set", price: 30, image: "https:
+  { id: "j5", name: "Diamond Earrings", price: 120, image: "https:
+  
+  
+  { id: "w1", name: "Ladies Curly Lace Front Wig", price: 150, image: "https:
+  { id: "w2", name: "Ladies Sleek Bob Wig", price: 120, image: "https:
+  { id: "w3", name: "Ladies Long Wavy Wig", price: 180, image: "https:
+  { id: "w4", name: "Ladies Pixie Cut Wig", price: 95, image: "https:
+  { id: "w5", name: "Ladies Braided Wig", price: 200, image: "https:
 ];
 
 interface HomePageProps {
@@ -68,7 +68,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
 
   useEffect(() => {
     if (selectedCategory && searchQuery) {
-      // Clear search when category is selected
+      
     }
   }, [selectedCategory, searchQuery]);
 
@@ -83,7 +83,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
     onCategoryChange?.(category);
     setIsLoadingProducts(false);
     
-    // Scroll to products section
+    
     const productsSection = document.querySelector('[data-products-section]');
     if (productsSection) {
       productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -103,7 +103,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 pb-24 pt-28">
-      {/* Hero */}
+      {}
       <section className="relative overflow-hidden rounded-xl border bg-gradient-to-tr from-rose-50 via-white to-rose-100">
         <div className="grid gap-3 p-4 md:grid-cols-2 md:p-6">
           <div className="flex flex-col justify-center">
@@ -145,7 +145,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
 
           <div className="relative">
             <LazyImage
-              src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1600&auto=format&fit=crop"
+              src="https:
               alt="Elegant woman in fashion"
               className="h-full w-full rounded-2xl object-cover"
             />
@@ -155,7 +155,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         </div>
       </section>
 
-      {/* Featured categories */}
+      {}
       <section className="mt-10">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold">Featured Categories</h2>
@@ -168,22 +168,22 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
             {
               key: "clothing",
               title: "Clothes",
-              img: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1200&auto=format&fit=crop",
+              img: "https:
             },
             {
               key: "bags",
               title: "Bags",
-              img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop",
+              img: "https:
             },
             {
               key: "jewelry",
               title: "Jewelry",
-              img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop",
+              img: "https:
             },
             {
               key: "wigs",
               title: "Ladies Wigs",
-              img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+              img: "https:
             },
           ].map((c) => (
             <button key={c.key} onClick={() => handleCategoryChange(c.key)} className="group overflow-hidden rounded-2xl border bg-white text-left">
@@ -203,7 +203,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         </div>
       </section>
 
-      {/* Products */}
+      {}
       <section className="mt-10" data-products-section>
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold">
@@ -244,7 +244,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
                     onClick={() => {
                       onCategoryChange?.('');
                       if (searchQuery) {
-                        // Clear search if there's a search query
+                        
                         window.location.reload();
                       }
                     }}
@@ -265,7 +265,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         </div>
       </section>
 
-      {/* Promo banner */}
+      {}
       <section className="mt-12 overflow-hidden rounded-2xl border bg-gradient-to-r from-gray-900 to-gray-800 p-6 text-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
@@ -284,7 +284,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         </div>
       </section>
 
-      {/* Best Sellers */}
+      {}
       <section className="mt-10">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold">Best Sellers</h2>
@@ -300,12 +300,12 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         </div>
       </section>
 
-      {/* Editorial section */}
+      {}
       <section className="mt-12 grid gap-4 md:grid-cols-2">
         <button onClick={() => handleCategoryChange('lookbook')} className="group overflow-hidden rounded-2xl border bg-white text-left">
           <div className="aspect-[16/10] overflow-hidden">
             <LazyImage
-              src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1600&auto=format&fit=crop"
+              src="https:
               alt="Women's fashion lookbook"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -322,7 +322,7 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
         <button onClick={() => handleCategoryChange('editorial')} className="group overflow-hidden rounded-2xl border bg-white text-left">
           <div className="aspect-[16/10] overflow-hidden">
             <LazyImage
-              src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1600&auto=format&fit=crop"
+              src="https:
               alt="Women's style guide"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />

@@ -38,7 +38,7 @@ export default function ProductCard({ p }: ProductCardProps) {
   ]);
   const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
 
-  // Freeze scroll when modal is open
+  
   useEffect(() => {
     if (showReviews) {
       document.body.style.overflow = 'hidden';
@@ -52,7 +52,7 @@ export default function ProductCard({ p }: ProductCardProps) {
 
   const handleAddToCart = async () => {
     setIsAddingToCart(true);
-    // Simulate API call
+    
     await new Promise(resolve => setTimeout(resolve, 800));
     showToast(`${p.name} added to cart!`, 'success');
     setIsAddingToCart(false);
@@ -82,14 +82,14 @@ export default function ProductCard({ p }: ProductCardProps) {
 
   return (
     <div className="group relative overflow-hidden rounded-2xl border bg-white animate-fade-in-up">
-      {/* Badge */}
+      {}
       {p.badge && (
         <div className="absolute left-3 top-3 z-10 rounded-full bg-black px-2 py-1 text-xs font-semibold text-white">
           {p.badge}
         </div>
       )}
       
-      {/* Wishlist button */}
+      {}
       <button
         onClick={handleAddToWishlist}
         className="absolute right-3 top-3 z-10 rounded-full bg-white/80 p-2 opacity-0 transition-opacity group-hover:opacity-100 hover:bg-white"
@@ -98,7 +98,7 @@ export default function ProductCard({ p }: ProductCardProps) {
         <Heart className="h-4 w-4" />
       </button>
 
-      {/* Image */}
+      {}
       <div className="aspect-[3/4] overflow-hidden">
         <LazyImage
           src={p.image}
@@ -107,11 +107,11 @@ export default function ProductCard({ p }: ProductCardProps) {
         />
       </div>
 
-      {/* Content */}
+      {}
       <div className="p-2 sm:p-4">
         <h3 className="text-xs sm:text-sm font-medium text-gray-900">{p.name}</h3>
         
-        {/* Rating & Reviews */}
+        {}
         <div className="mt-1 flex items-center justify-between">
           {p.rating && (
             <button
@@ -131,10 +131,10 @@ export default function ProductCard({ p }: ProductCardProps) {
           </button>
         </div>
         
-        {/* Price */}
+        {}
         <p className="mt-1 sm:mt-2 text-sm sm:text-lg font-semibold text-gray-900">{currency(p.price)}</p>
         
-        {/* Add to cart button */}
+        {}
         <LoadingButton
           onClick={handleAddToCart}
           isLoading={isAddingToCart}
@@ -145,7 +145,7 @@ export default function ProductCard({ p }: ProductCardProps) {
         </LoadingButton>
       </div>
 
-      {/* Reviews Modal */}
+      {}
       {showReviews && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
           <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white p-6">
@@ -159,7 +159,7 @@ export default function ProductCard({ p }: ProductCardProps) {
               </button>
             </div>
 
-            {/* Add Review Form */}
+            {}
             <form onSubmit={handleSubmitReview} className="mb-6 rounded-xl border p-4">
               <h4 className="font-medium mb-3">Write a Review</h4>
               <div className="space-y-3">
@@ -197,7 +197,7 @@ export default function ProductCard({ p }: ProductCardProps) {
               </div>
             </form>
 
-            {/* Reviews List */}
+            {}
             <div>
               <h4 className="font-medium mb-4">Customer Reviews ({reviews.length})</h4>
               <div className="max-h-64 overflow-y-auto space-y-4">

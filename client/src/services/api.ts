@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://backend-glam.onrender.com';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https:
 
 const getAuthToken = () => localStorage.getItem('authToken');
 
@@ -23,7 +23,7 @@ const apiRequest = async (endpoint: string, options: RequestInit = {}) => {
   return response.json();
 };
 
-// User Profile API
+
 export const userAPI = {
   getProfile: () => apiRequest('/user/profile'),
   updateProfile: (data: { displayName?: string; phone?: string }) =>
@@ -33,7 +33,7 @@ export const userAPI = {
     }),
 };
 
-// Addresses API
+
 export const addressAPI = {
   getAddresses: () => apiRequest('/user/addresses'),
   addAddress: (address: any) =>
@@ -52,7 +52,7 @@ export const addressAPI = {
     }),
 };
 
-// Payment Methods API
+
 export const paymentAPI = {
   getPaymentMethods: () => apiRequest('/user/payment-methods'),
   addPaymentMethod: (paymentMethod: any) =>
@@ -66,7 +66,7 @@ export const paymentAPI = {
     }),
 };
 
-// Notifications API
+
 export const notificationAPI = {
   getSettings: () => apiRequest('/user/notifications'),
   updateSettings: (settings: any) =>
@@ -76,7 +76,7 @@ export const notificationAPI = {
     }),
 };
 
-// Orders API
+
 export const orderAPI = {
   getOrders: () => apiRequest('/user/orders'),
   getOrder: (orderId: string) => apiRequest(`/user/orders/${orderId}`),

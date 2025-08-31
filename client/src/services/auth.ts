@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3001';
+const API_BASE = 'http:
 
 interface AuthResponse {
   token: string;
@@ -10,7 +10,7 @@ interface AuthResponse {
   };
 }
 
-// Send Firebase ID token to backend for JWT
+
 export const authenticateWithBackend = async (idToken: string): Promise<AuthResponse> => {
   const response = await fetch(`${API_BASE}/auth/google`, {
     method: 'POST',
@@ -27,7 +27,7 @@ export const authenticateWithBackend = async (idToken: string): Promise<AuthResp
   return response.json();
 };
 
-// Verify JWT token with backend
+
 export const verifyToken = async (token: string) => {
   const response = await fetch(`${API_BASE}/auth/verify`, {
     headers: {
@@ -42,7 +42,7 @@ export const verifyToken = async (token: string) => {
   return response.json();
 };
 
-// Logout from backend
+
 export const logoutFromBackend = async (token: string) => {
   const response = await fetch(`${API_BASE}/auth/logout`, {
     method: 'POST',

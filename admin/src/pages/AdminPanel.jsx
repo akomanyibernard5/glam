@@ -61,7 +61,7 @@ export default function AdminPanel() {
 
   return (
     <div className="min-h-screen bg-black text-white flex">
-      {/* Fixed Sidebar */}
+      {}
       <aside className="fixed left-0 top-0 h-full w-64 bg-zinc-900 border-r border-zinc-700 p-6 z-40">
         <div className="flex items-center gap-2 font-semibold text-lg mb-8 cursor-pointer">
           <img src="/src/assets/logo.svg" alt="Ladies Glam" className="h-8 w-8 rounded-xl filter brightness-0 invert" />
@@ -120,9 +120,9 @@ export default function AdminPanel() {
         </div>
       </aside>
 
-      {/* Main Content */}
+      {}
       <div className="flex-1 ml-64">
-        {/* Top Bar */}
+        {}
         <header className="sticky top-0 z-30 border-b border-zinc-700 bg-zinc-900 px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="ml-auto flex items-center gap-2">
@@ -148,13 +148,13 @@ export default function AdminPanel() {
           </div>
         </header>
 
-        {/* Main Content */}
+        {}
         {renderPage()}
 
 
       </div>
 
-      {/* Toast Container */}
+      {}
       <ToastContainer />
     </div>
   );
