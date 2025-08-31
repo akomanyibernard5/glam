@@ -21,42 +21,42 @@ const Wishlist: React.FC<WishlistProps> = ({ onNavigate }) => {
       id: '1',
       name: 'Wrap Midi Dress',
       price: 69,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop',
       inStock: true
     },
     {
       id: '2',
       name: 'Strappy Heels',
       price: 59,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop',
       inStock: true
     },
     {
       id: '3',
       name: 'Silk Blouse',
       price: 79,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop',
       inStock: true
     },
     {
       id: '4',
       name: 'Gold Necklace',
       price: 35,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
       inStock: true
     },
     {
       id: '5',
       name: 'Crossbody Bag',
       price: 110,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop',
       inStock: false
     },
     {
       id: '6',
       name: 'Blazer',
       price: 99,
-      image: 'https:
+      image: 'https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=1200&auto=format&fit=crop',
       inStock: true
     }
   ]);

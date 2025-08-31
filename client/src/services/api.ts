@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https:
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://backend-glam.onrender.com';
 
 const getAuthToken = () => localStorage.getItem('authToken');
 
