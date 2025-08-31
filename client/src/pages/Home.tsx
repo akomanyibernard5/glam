@@ -72,8 +72,13 @@ export default function HomePage({ onNavigate, selectedCategory = '', onCategory
     }
   }, [selectedCategory, searchQuery]);
 
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/auth');
+    }
+  }, [isAuthenticated, navigate]);
+
   if (!isAuthenticated) {
-    navigate('/auth');
     return null;
   }
 
